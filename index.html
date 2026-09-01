@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa de Violeta Pousada | Cartão Virtual</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(255, 255, 255, 0.18),
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at bottom right,
+            rgba(146, 90, 181, 0.25),
+            transparent 35%
+          ),
+          linear-gradient(135deg, #2b122f, #4a1d4f, #672d72);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(2px);
+        z-index: 0;
+      }
+
+      .card {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 380px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 20px;
+        padding: 30px 20px;
+        text-align: center;
+        box-shadow: 0 12px 30px rgba(20, 0, 30, 0.28);
+        -webkit-backdrop-filter: blur(14px);
+        backdrop-filter: blur(14px);
+      }
+
+      .photo {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        object-position: top 10%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #fff;
+        margin-bottom: 15px;
+      }
+
+      h1 {
+        margin: 10px 0 5px;
+        font-size: 22px;
+      }
+
+      p {
+        margin: 0 0 25px;
+        font-size: 14px;
+        opacity: 0.9;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        transition: transform 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: scale(1.03);
+      }
+
+      .whatsapp {
+        background: #25d366;
+        box-shadow: 0 6px 15px rgb(44, 39, 45);
+      }
+
+      .email {
+        background: #0072c6;
+        box-shadow: 0 6px 15px rgb(44, 39, 45);
+      }
+
+      .instagram {
+        background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+        box-shadow: 0 6px 15px rgb(44, 39, 45);
+      }
+      .last-project {
+        background: linear-gradient(135deg, #972fb7, #46034e);
+        box-shadow: 0 6px 15px rgb(44, 39, 45);
+      }
+
+      .qr-container {
+        margin-top: 25px;
+        text-align: center;
+      }
+
+      .qr-container img {
+        width: 140px;
+        height: 140px;
+        border-radius: 12px;
+        background: #fff;
+        padding: 8px;
+      }
+
+      .qr-container span {
+        display: block;
+        margin-top: 8px;
+        font-size: 12px;
+        opacity: 0.8;
+      }
+
+      footer {
+        margin-top: 20px;
+        font-size: 12px;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <img src="logo.svg" alt="Casa de Violeta Pousada" class="photo" />
+
+      <h1>Casa de Violeta Pousada</h1>
+      <p>Requinte e conforto para sua estadia.</p>
+
+      <a
+        class="btn whatsapp"
+        href="https://wa.me/5532984409797"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WhatsApp
+      </a>
+
+      <a class="btn email" href="mailto:casadevioletapousada@hotmail.com">
+        E-mail
+      </a>
+
+      <a
+        class="btn instagram"
+        href="https://www.instagram.com/casadevioletapousada/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+      <a
+        class="btn last-project"
+        href="https://www.casadevioletapousada.com.br/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visite nosso site!
+      </a>
+
+      <div class="qr-container">
+        <img src="codeQr.png" alt="QR Code do cartão de visitas" />
+        <span>Escaneie para acessar</span>
+      </div>
+
+      <footer>Cartão de visitas virtual</footer>
+    </div>
+  </body>
+</html>

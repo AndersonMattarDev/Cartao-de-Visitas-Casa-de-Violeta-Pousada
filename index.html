@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Casa de Violeta Pousada | Cartão Virtual</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
     <style>
       * {
@@ -31,6 +35,7 @@
         align-items: center;
         color: #fff;
         position: relative;
+        overflow-x: hidden;
         overflow: hidden;
       }
 
@@ -46,8 +51,13 @@
       .card {
         position: relative;
         z-index: 1;
-        width: 100%;
-        max-width: 380px;
+        width: min(400px, calc(100% - 24px));
+        max-width: 400px;
+        max-height: calc(100dvh - 24px);
+        margin: 12px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
         background: rgba(255, 255, 255, 0.08);
         border: 1px solid rgba(255, 255, 255, 0.18);
         border-radius: 20px;
@@ -66,30 +76,40 @@
         border-radius: 50%;
         object-fit: cover;
         border: 3px solid #fff;
-        margin-bottom: 15px;
+        margin: 0 auto;
       }
 
       h1 {
-        margin: 10px 0 5px;
+        margin: 0;
         font-size: 22px;
       }
 
       p {
-        margin: 0 0 25px;
+        margin: 0;
         font-size: 14px;
         opacity: 0.9;
       }
 
       .btn {
-        display: block;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
-        padding: 14px;
-        margin-bottom: 12px;
+        min-height: 48px;
+        padding: 14px 48px;
+        margin: 0;
         border-radius: 10px;
         text-decoration: none;
-        color: #fff;
+        color: #ffffff;
         font-weight: bold;
         transition: transform 0.2s ease;
+      }
+
+      .btn i {
+        position: absolute;
+        left: 16px;
+        text-align: center;
       }
 
       .btn:hover {
@@ -97,12 +117,12 @@
       }
 
       .whatsapp {
-        background: #25d366;
+        background: linear-gradient(135deg, #25d366, #128c7e);
         box-shadow: 0 6px 15px rgb(44, 39, 45);
       }
 
-      .email {
-        background: #0072c6;
+      .facebook {
+        background: linear-gradient(135deg, #1877f2, #0d47a1);
         box-shadow: 0 6px 15px rgb(44, 39, 45);
       }
 
@@ -116,7 +136,7 @@
       }
 
       .qr-container {
-        margin-top: 25px;
+        margin: 0;
         text-align: center;
       }
 
@@ -136,9 +156,70 @@
       }
 
       footer {
-        margin-top: 20px;
-        font-size: 12px;
+        margin: 0;
+        margin-top: 8px;
+        font-size: 10px;
         opacity: 0.7;
+      }
+
+      @media (max-width: 600px), (max-height: 850px) {
+        body {
+          align-items: flex-start;
+        }
+
+        .card {
+          min-height: calc(100dvh - 24px);
+          padding: 24px 18px;
+          gap: 10px;
+        }
+
+        .photo {
+          width: 130px;
+          height: 130px;
+        }
+
+        h1 {
+          font-size: 21px;
+          margin-top: 20px;
+        }
+
+        p {
+          margin: 0;
+          margin-bottom: 40px;
+        }
+
+        .btn {
+          min-height: 44px;
+          padding: 11px 44px;
+        }
+
+        .btn i {
+          left: 14px;
+        }
+
+        .qr-container {
+          margin: 0;
+          margin-top: 40px;
+        }
+
+        .qr-container img {
+          width: 100px;
+          height: 100px;
+        }
+
+        .qr-container span {
+          margin-top: 4px;
+        }
+
+        footer {
+          margin: 0;
+          margin-top: 40px;
+        }
+        footer a {
+          font-size: 9px;
+          text-decoration: none;
+          color: #fff;
+        }
       }
     </style>
   </head>
@@ -156,11 +237,11 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        WhatsApp
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
       </a>
 
-      <a class="btn email" href="mailto:casadevioletapousada@hotmail.com">
-        E-mail
+      <a class="btn facebook" href="https://www.facebook.com/share/1Etm3Rj9e4/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-facebook" aria-hidden="true"></i> Facebook
       </a>
 
       <a
@@ -169,7 +250,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        Instagram
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram
       </a>
 
       <a
@@ -178,7 +259,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        Visite nosso site!
+        <i class="fa-solid fa-globe" aria-hidden="true"></i> Visite nosso site!
       </a>
 
       <div class="qr-container">
@@ -186,7 +267,9 @@
         <span>Escaneie para acessar</span>
       </div>
 
-      <footer>Cartão de visitas virtual</footer>
+      <footer>Cartão de visitas virtual |<a href="https://portfolio-ten-ashen-18.vercel.app/" target="_blank" rel="noopener noreferrer"> Design by Anderson Mattar</a></footer>
+      
     </div>
   </body>
+ 
 </html>

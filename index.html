@@ -36,7 +36,7 @@
         color: #fff;
         position: relative;
         overflow-x: hidden;
-        overflow-y: auto;
+        overflow: hidden;
       }
 
       body::before {
@@ -53,14 +53,15 @@
         z-index: 1;
         width: min(400px, calc(100% - 24px));
         max-width: 400px;
+        min-height: 90dvh;
         margin: 12px 0;
         display: flex;
         flex-direction: column;
-        gap: 14px;
+        gap: 10px;
         background: rgba(255, 255, 255, 0.08);
         border: 1px solid rgba(255, 255, 255, 0.18);
         border-radius: 20px;
-        padding: 30px 20px;
+        padding: 20px;
         text-align: center;
         box-shadow: 0 12px 30px rgba(20, 0, 30, 0.28);
         -webkit-backdrop-filter: blur(14px);
@@ -68,13 +69,13 @@
       }
 
       .photo {
-        width: 200px;
-        height: 200px;
+        width: 140px;
+        height: 140px;
         object-fit: cover;
         object-position: top 10%;
         border-radius: 50%;
         object-fit: cover;
-        border: 3px solid #fff;
+        border: 1px solid #fff;
         margin: 0 auto;
       }
 
@@ -95,8 +96,8 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        min-height: 48px;
-        padding: 14px 48px;
+        min-height: 42px;
+        padding: 10px 48px;
         margin: 0;
         border-radius: 10px;
         text-decoration: none;
@@ -118,39 +119,48 @@
       .whatsapp {
         background: linear-gradient(135deg, #25d366, #128c7e);
         box-shadow: 0 6px 15px rgb(44, 39, 45);
+        margin-top: 28px;
+        margin-bottom: 10px;
       }
 
       .facebook {
         background: linear-gradient(135deg, #1877f2, #0d47a1);
         box-shadow: 0 6px 15px rgb(44, 39, 45);
+        margin-bottom: 10px;
       }
 
       .instagram {
         background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
         box-shadow: 0 6px 15px rgb(44, 39, 45);
+        margin-bottom: 10px;
       }
       .last-project {
         background: linear-gradient(135deg, #972fb7, #46034e);
         box-shadow: 0 6px 15px rgb(44, 39, 45);
+        margin-bottom: 10px;
       }
       .location {
         background: linear-gradient(135deg, #0f9b8e, #087f8b);
         box-shadow: 0 6px 15px rgb(44, 39, 45);
+        margin-bottom: 10px;
       }
 
       .reservations {
         background: linear-gradient(135deg, #e09f3e, #c46b27);
         box-shadow: 0 6px 15px rgb(44, 39, 45);
+        margin-bottom: 10px;
       }
 
       .qr-container {
         margin: 0;
+        margin-top: 28px;
         text-align: center;
       }
 
       .qr-container img {
-        width: 140px;
-        height: 140px;
+        width: 120px;
+        height: 120px;
+        margin-top: 28px;
         border-radius: 12px;
         background: #fff;
         padding: 8px;
@@ -176,29 +186,29 @@
         }
 
         .card {
-          min-height: 0;
-          padding: 24px 18px;
-          gap: 10px;
+          min-height: calc(100dvh - 24px);
+          padding: 14px 18px;
+          gap: 6px;
         }
 
         .photo {
-          width: 130px;
-          height: 130px;
+          width: 100px;
+          height: 100px;
         }
 
         h1 {
-          font-size: 21px;
-          margin-top: 20px;
+          font-size: 19px;
+          margin-top: 0;
         }
 
         p {
           margin: 0;
-          margin-bottom: 12px;
+          margin-bottom: 4px;
         }
 
         .btn {
-          min-height: 44px;
-          padding: 11px 44px;
+          min-height: 36px;
+          padding: 8px 44px;
         }
 
         .btn i {
@@ -207,12 +217,12 @@
 
         .qr-container {
           margin: 0;
-          margin-top: 8px;
+          margin-top: 4px;
         }
 
         .qr-container img {
-          width: 100px;
-          height: 100px;
+          width: 90px;
+          height: 90px;
         }
 
         .qr-container span {
@@ -221,7 +231,7 @@
 
         footer {
           margin: 0;
-          margin-top: 8px;
+          margin-top: 4px;
         }
         footer a {
           font-size: 9px;
